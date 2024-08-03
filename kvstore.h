@@ -1,6 +1,4 @@
 
-
-
 #ifndef __KVSTORE_H__
 #define __KVSTORE_H__
 

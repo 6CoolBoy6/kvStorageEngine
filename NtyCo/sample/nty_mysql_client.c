@@ -1,8 +1,3 @@
-
-
-
-
-
 #include "nty_coroutine.h"
 
 #include <stdio.h>

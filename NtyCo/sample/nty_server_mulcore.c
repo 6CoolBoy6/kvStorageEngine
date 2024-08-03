@@ -1,49 +1,3 @@
-/*
- *  Author : WangBoJing , email : 1989wangbojing@gmail.com
- * 
- *  Copyright Statement:
- *  --------------------
- *  This software is protected by Copyright and the information contained
- *  herein is confidential. The software may not be copied and the information
- *  contained herein may not be used or disclosed except with the written
- *  permission of Author. (C) 2017
- * 
- *
-
-****       *****                                      *****
-  ***        *                                       **    ***
-  ***        *         *                            *       **
-  * **       *         *                           **        **
-  * **       *         *                          **          *
-  *  **      *        **                          **          *
-  *  **      *       ***                          **
-  *   **     *    ***********    *****    *****  **                   ****
-  *   **     *        **           **      **    **                 **    **
-  *    **    *        **           **      *     **                 *      **
-  *    **    *        **            *      *     **                **      **
-  *     **   *        **            **     *     **                *        **
-  *     **   *        **             *    *      **               **        **
-  *      **  *        **             **   *      **               **        **
-  *      **  *        **             **   *      **               **        **
-  *       ** *        **              *  *       **               **        **
-  *       ** *        **              ** *        **          *   **        **
-  *        ***        **               * *        **          *   **        **
-  *        ***        **     *         **          *         *     **      **
-  *         **        **     *         **          **       *      **      **
-  *         **         **   *          *            **     *        **    **
-*****        *          ****           *              *****           ****
-                                       *
-                                      *
-                                  *****
-                                  ****
-
-
-
- *
- */
-
-
-
 
 #include <arpa/inet.h>
 
@@ -290,7 +244,8 @@ int add_shmvalue(void) {
 	do {
 
 		value = global_shmaddr->total;
-		ret = cmpxchg(&global_shmaddr->total, (unsigned long)value, (unsigned long)(value+1), 4);
+		ret = cmpxchg(&global_shmaddr->total, (unsigned long)value, (unsigned long)(value+1), 4);
+
 
 	} while (ret != value);
 
@@ -304,7 +259,8 @@ int sub_shmvalue(void) {
 	do {
 
 		value = global_shmaddr->total;
-		ret = cmpxchg(&global_shmaddr->total, (unsigned long)value, (unsigned long)(value-1), 4);
+		ret = cmpxchg(&global_shmaddr->total, (unsigned long)value, (unsigned long)(value-1), 4);
+
 
 	} while (ret != value);
 

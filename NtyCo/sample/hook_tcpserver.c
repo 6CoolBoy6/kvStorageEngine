@@ -1,7 +1,3 @@
-
-
-
-
 #include "nty_coroutine.h"
 
 #include <arpa/inet.h>
