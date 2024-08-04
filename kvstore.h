@@ -93,7 +93,7 @@ typedef struct hashtable_s hashtable_t;
 extern hashtable_t Hash;
 
 int kvstore_hash_create(hashtable_t *hash);
-void kvstore_hash_destory(hashtable_t *hash);
+void kvstore_hash_destroy(hashtable_t *hash);
 int kvs_hash_set(hashtable_t *hash, char *key, char *value);
 char *kvs_hash_get(hashtable_t *hash, char *key);
 int kvs_hash_delete(hashtable_t *hash, char *key);
@@ -122,7 +122,7 @@ extern array_t Array;
 
 
 int kvstore_array_create(array_t *arr);
-void kvstore_array_destory(array_t *arr); 
+void kvstore_array_destroy(array_t *arr); 
 
 int kvs_array_set(array_t *arr, char *key, char *value);
 char *kvs_array_get(array_t *arr, char *key);
@@ -143,7 +143,7 @@ typedef struct _rbtree rbtree_t;
 extern rbtree_t Tree;
 
 int kvstore_rbtree_create(rbtree_t *tree);
-void kvstore_rbtree_destory(rbtree_t *tree);
+void kvstore_rbtree_destroy(rbtree_t *tree);
 int kvs_rbtree_set(rbtree_t *tree, char *key, char *value);
 char* kvs_rbtree_get(rbtree_t *tree, char *key);
 int kvs_rbtree_delete(rbtree_t *tree, char *key);

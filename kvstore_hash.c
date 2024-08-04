@@ -270,7 +270,7 @@ int kvstore_hash_create(hashtable_t *hash) {
 }
 
 
-void kvstore_hash_destory(hashtable_t *hash) {
+void kvstore_hash_destroy(hashtable_t *hash) {
 
 	return dest_hashtable(hash);
 

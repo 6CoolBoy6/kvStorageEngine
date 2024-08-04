@@ -390,7 +390,7 @@ int kvstore_rbtree_create(rbtree *tree) {
 	return 0;
 }
 
-void kvstore_rbtree_destory(rbtree *tree) {
+void kvstore_rbtree_destroy(rbtree *tree) {
 
 	if (!tree) return ;
 

@@ -1,4 +1,3 @@
-
 #include "kvstore.h"
 
 
@@ -378,9 +377,6 @@ int kvstore_request(struct conn_item *item) {
 
 
 
-
-
-
 int init_kvengine(void) {
 
 
@@ -402,15 +398,15 @@ int init_kvengine(void) {
 int exit_kvengine(void) {
 
 #if ENABLE_ARRAY_KVENGINE
-	kvstore_array_destory(&Array);
+	kvstore_array_destroy(&Array);
 #endif
 
 #if ENABLE_RBTREE_KVENGINE
-	kvstore_rbtree_destory(&Tree);
+	kvstore_rbtree_destroy(&Tree);
 #endif
 
 #if ENABLE_HASH_KVENGINE
-	kvstore_hash_destory(&Hash);
+	kvstore_hash_destroy(&Hash);
 #endif
 
 }

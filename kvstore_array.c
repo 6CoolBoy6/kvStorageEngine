@@ -21,8 +21,8 @@ int kvstore_array_create(array_t *arr) {
 	return 0;
 }
 
-// destory
-void kvstore_array_destory(array_t *arr) {
+// destroy
+void kvstore_array_destroy(array_t *arr) {
 
 	if (!arr) return ;
 
@@ -51,7 +51,8 @@ int kvs_array_set(array_t *arr, char *key, char *value) {
 
 	int i = 0;
 	for (i = 0;i < arr->array_idx;i ++) {
-		if (arr->array_table[i].key == NULL) {
+		if (arr->array_table[i].key == NULL) {
+
 			arr->array_table[i].key = kcopy;
 			arr->array_table[i].value = vcopy;
 			arr->array_idx ++;
