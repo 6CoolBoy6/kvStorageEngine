@@ -127,6 +127,72 @@ $ ./testcase -s 127.0.0.1 -p 9096 -m 1
 
 由上述结果可知，随着设备与网络等条件的优化，确实可以提高该 kv 存储引擎的性能~
 
+## 客户端多语言测试
+
+### Go
+
+<img src="./README.assets/image-20240805112346000.png" alt="image-20240805112346000" style="zoom: 67%;" />
+
+<img src="./README.assets/image-20240805112507216.png" alt="image-20240805112507216" style="zoom:67%;" />
+
+### Python
+
++ 客户端发送 `SET PythonName py`之后，收到 kv 存储引擎回应的内容如下：
+
+  ![image-20240805150048664](./README.assets/image-20240805150048664.png)
+
++ 客户端发送 `GET PythonName`之后，收到 kv 存储引擎回应的内容如下：
+
+  ![image-20240805150139208](./README.assets/image-20240805150139208.png)
+
++ 客户端发送 `MOD PythonName hello`之后，收到 kv 存储引擎回应的内容如下：
+
+  ![image-20240805150311321](./README.assets/image-20240805150311321.png)
+
++ 客户端发送 `GET PythonName`之后，收到 kv 存储引擎回应的内容如下：
+
+  ![image-20240805150421935](./README.assets/image-20240805150421935.png)
+
++ 客户端发送 `DEL PythonName`之后，收到 kv 存储引擎回应的内容如下：
+
+  ![image-20240805150625066](./README.assets/image-20240805150625066.png)
+
++ 客户端发送 `GET PythonName`之后，收到 kv 存储引擎回应的内容如下：
+
+  ![image-20240805150728186](./README.assets/image-20240805150728186.png)
+
+### 其他语言可自行测试
+
+#### go编译
+```bash
+# go build go-kvstore.go
+# ./go-kvstore
+```
+
+#### nodejs编译
+```bash
+# node js-kvstore.js
+```
+
+#### python
+```bash
+# python3 py-kvstore.py
+```
+
+#### rust
+```bash
+# rustc rust-kvstore.rs
+# ./rust-kvstore
+```
+
+#### java
+```bash
+# javac javakvstore.java
+# java javakvstore
+```
+
+
+
 ## Git 常用命令
 
 参考这篇博客：[【最新 & 持续更新】使用 Git 和 GitHub 进行版本控制和协作开发 | 上传个人代码 | 增删改查](https://blog.csdn.net/zss6666yi/article/details/140879769?spm=1001.2014.3001.5502)
